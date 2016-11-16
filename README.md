@@ -13,12 +13,14 @@ To verify your progress or final solution, run the unit test file associated wit
 Running Tests
 ----------------
 Every exercise comes with a unit test file that can be found in the `tests` directory.
-Ex: Say you want to run the unit tests for the 'reverseString' exercise found in the `beginner` directory:
+
+Ex: Say you want to run the unit tests for the `reverseString.py` exercise found in the `beginner` directory, run the following command:
 ```
 python3 tests/beginner/reverseString_tests.py
 ```
+You will receive a CLI prompt telling whether you passed or failed the unit tests.
 
 Credits
 ---------
-These programming exercises are originally from [Free Code Camp](freecodecamp.com)'s set of algorithm challenges.
-I ported them for use in a Python environment for learning purposes; no complete ownership over the originals is intended.
+These programming exercises are originally from [Free Code Camp's](http://freecodecamp.com) set of algorithm challenges.
+I ported them for use in a Python environment for learning purposes; no ownership over the originals is intended.
