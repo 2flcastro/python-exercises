@@ -4,9 +4,12 @@ Here is a series of Python programming exercises. They are categorized by order 
 
 Adding Your Code
 ------------------
-To add the code for your solution, it is recommended that you create a separate git branch.
+To add the code for your solution, it is recommended that you create a new git branch.
+```
+git checkout -b <name-of-new-branch>
+```
 
-From your new branch you can open whatever file you like and fill in the designated function with your solution. It is important that you use the function pre-defined in the files so that they work with the intended unit tests.
+From your new branch you can open whatever file you like and use the provided function to create your solution. It is important that you use the function provided in the files so that they work with the intended unit tests. The output of the solution will be used to run the unit tests.
 
 To verify your progress or final solution, run the unit test file associated with the exercise.
 
