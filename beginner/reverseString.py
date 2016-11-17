@@ -27,4 +27,3 @@ class TestReverseString(unittest.TestCase):
 # Run tests
 if __name__ == '__main__':
     unittest.main()
->>>>>>> 637c1d90f6ee657b7ba3459a22b2eba6bdbf4fdf
