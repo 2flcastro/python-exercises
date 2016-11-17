@@ -18,6 +18,6 @@ class TestReverseString(unittest.TestCase):
         self.assertEqual(reverseString('Greetings from Earth'),
             'htraE morf sgniteerG')
 
-#Run tests
+# Run tests
 if __name__ == '__main__':
     unittest.main()
