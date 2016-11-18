@@ -16,7 +16,13 @@ import unittest
 
 def factorialize(num):
     # your code here...
-    return num
+    total = 1
+    if num == 0:
+        return 1
+    while num > 0:
+        total = total * num
+        num -= 1
+    return total
 
 
 
