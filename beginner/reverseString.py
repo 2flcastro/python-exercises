@@ -7,7 +7,7 @@ import unittest
 
 def reverseString(str):
     # your code goes here...
-    return str
+    return str[::-1]
 
 
 
