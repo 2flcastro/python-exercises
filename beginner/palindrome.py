@@ -16,53 +16,60 @@
 # and "2_A3*3#A2".
 # ----------------------------------------------------
 import unittest
+import re
 
 def palindrome(str):
-    return True
+    # replace non-alphanumeric characters and turn lowercase
+    str = re.sub('[\W_]', '', str).lower()
+    reverseStr = list(str)
+    reverseStr.reverse()
+    reverseStr = ''.join(reverseStr)
+    return str == reverseStr
 
 
 
 # ----------------------------------
 # Unit Tests
 # ----------------------------------
+
 class TestPalindrome(unittest.TestCase):
-    def Test_1(self):
+    def test_1(self):
         self.assertEqual(palindrome('eye'), True)
 
-    def Test_2(self):
+    def test_2(self):
         self.assertEqual(palindrome('_eye'), True)
 
-    def Test_3(self):
+    def test_3(self):
         self.assertEqual(palindrome('race car'), True)
 
-    def Test_4(self):
+    def test_4(self):
         self.assertEqual(palindrome('not a palindrome'), False)
 
-    def Test_5(self):
+    def test_5(self):
         self.assertEqual(palindrome('A man, a plan, a canal. Panama'), True)
 
-    def Test_6(self):
+    def test_6(self):
         self.assertEqual(palindrome('never odd or even'), True)
 
-    def Test_7(self):
+    def test_7(self):
         self.assertEqual(palindrome('nope'), False)
 
-    def Test_8(self):
+    def test_8(self):
         self.assertEqual(palindrome('almostomla'), False)
 
-    def Test_9(self):
+    def test_9(self):
         self.assertEqual(palindrome('My age is 0, 0 si ega ym.'), True)
 
-    def Test_10(self):
+    def test_10(self):
         self.assertEqual(palindrome('1 eye for of 1 eye'), False)
 
-    def Test_11(self):
+    def test_11(self):
         self.assertEqual(palindrome('0_0 (: /-\ :) 0-0'), True)
 
-    def Test_12(self):
+    def test_12(self):
         self.assertEqual(palindrome('five|\_/|four'), False)
 
 
 # Run Tests
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()
