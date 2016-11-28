@@ -11,17 +11,18 @@ git checkout -b <name-of-new-branch>
 
 From your new branch you can open whatever file you like and use the provided function to create your solution. It is important that you use the function provided in the files so that they work with the intended unit tests. The output of the solution will be used to run the unit tests.
 
-To verify your progress or final solution, run the unit test file associated with the exercise.
+To verify your progress or final solution, run the unit tests associated with that file.
 
 Running Tests
 ----------------
-Every exercise comes with a unit test file that can be found in the `tests` directory.
-
-Ex: Say you want to run the unit tests for the `reverseString.py` exercise found in the `beginner` directory, run the following command:
+Every exercise comes with a unit tests. Running the file will run the tests for you and you will receive a CLI message telling you whether your tests are passing or failing. To run the tests run this command:
 ```
-python3 tests/beginner/reverseString_tests.py
+python3 <path-to-file/name-of-file.py>
 ```
-You will receive a CLI prompt telling whether you passed or failed the unit tests.
+For instance, to run the tests of the `reverseString` exercise found in the `beginner` directory (assuming you are in the home directory) run:
+```
+python3 beginner/reverseString.py
+```
 
 Credits
 ---------
