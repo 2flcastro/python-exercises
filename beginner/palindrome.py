@@ -21,7 +21,17 @@
 import unittest
 
 def palindrome(str):
-    return True
+    new_str = str.replace(" ", "")
+    new_str = new_str.lower()
+    punctuation = ['?', '!', ",", ".", ";", ":"]
+    symbols = ['@']
+    for x in new_str:
+        if x in punctuation:
+            new_str.replace(x, '')
+    for i in new_str:
+        if i in symbols:
+            new_str.replace(i, '')
+    return new_str == new_str[::-1]
 
 
 

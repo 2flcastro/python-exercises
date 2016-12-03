@@ -8,7 +8,11 @@ import unittest
 
 
 def find_longest_word(str):
-    return len(str)
+    word_list = str.split()
+    word_lengths = []
+    for word in word_list:
+        word_lengths.append(len(word))
+    return max(word_lengths)
 
 
 # ----------------------------------
