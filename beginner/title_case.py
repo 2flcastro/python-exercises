@@ -11,6 +11,11 @@
 import unittest
 
 def title_case(sentence):
+    words = sentence.split()
+    for i, word in enumerate(words):
+        word = word.lower()
+        words[i] = word.capitalize()
+    sentence = ' '.join(words)
     return sentence
 
 
