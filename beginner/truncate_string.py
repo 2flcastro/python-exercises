@@ -17,6 +17,8 @@ import unittest
 def truncate_string(str, num):
     return str
 
+
+
 # ----------------------------------
 # Unit Tests
 # ----------------------------------
