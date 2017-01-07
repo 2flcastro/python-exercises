@@ -1,22 +1,22 @@
 # ----------------------------------
 # Mutations
 # ----------------------------------
-# Return true if the string in the first element of the array contains all of
-# the letters of the string in the second element of the array.
+# Return true if the string in the first element of the list contains all of
+# the letters of the string in the second element of the list.
 #
-# For example, ["hello", "Hello"] should return true because of the letter in
+# For example, ["hello", "Hello"] should return True because of the letter in
 # the second string are present in the first, ignoring case.
 #
-# The arguments ["hello", "hey"] should return false because the string "hello"
+# The arguments ["hello", "hey"] should return False because the string "hello"
 # does not contain a "y".
 #
-# Lastly, ["Alien", "line"] should return true because all of the letters in
+# Lastly, ["Alien", "line"] should return True because all of the letters in
 # "line" are present in "Alien".
 # ----------------------------------
 
 import unittest
 
-def mutations(arr):
+def mutations(lst):
     return True
 
 
@@ -50,3 +50,10 @@ class Test_Mutations(unittest.TestCase):
 
     def test_9(self):
         self.assertEqual(mutations(["voodoo", "no"]), False)
+
+
+# ----------------------------------
+# Run Tests
+# ----------------------------------
+if __name__ == "__main__":
+    unittest.main()

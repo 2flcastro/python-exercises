@@ -1,13 +1,14 @@
 # ----------------------------------
-# Largest Numbers in Arrays
+# Largest Numbers in List
 # ----------------------------------
-# Return an array consisting of the largest number from each provided sub-array.
-# For simplicity, the provided array will contain exactly 4 sub-arrays.
+# Return a list consisting of the largest number from each provided sub-list.
+# For simplicity, the provided list will contain exactly 4 sub-lists.
 # ----------------------------------
+
 import unittest
 
-def largest_of_four(arrs):
-    return largest_arr
+def largest_of_four(lsts):
+    return largest_lst
 
 
 
@@ -20,6 +21,7 @@ class Test_Largest_Of_Four(unittest.TestCase):
 
     def test_2(self):
         self.assertEqual(largest_of_four([[4, 9, 1, 3], [13, 35, 18, 26], [32, 35, 97, 39], [1000000, 1001, 857, 1]]), [9, 35, 97, 1000000])
+
 
 # ----------------------------------
 # Run Tests
