@@ -15,6 +15,10 @@
 import unittest
 
 def truncate_string(str, num):
+    if len(str) > num:
+        if num <= 3:
+            return str[:num:] + "..."
+        return str[:num-3:] + "..."
     return str
 
 
