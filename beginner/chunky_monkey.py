@@ -8,6 +8,18 @@
 import unittest
 
 def chunk_array_groups(arr, size):
+    # create final chunk list
+    chunk_array = []
+    # create placeholder list
+    temp_chunk = []
+    for item in arr:
+        if len(temp_chunk) == size:
+            chunk_array.append(temp_chunk)
+            temp_chunk = []
+            temp_chunk.append(item)
+        else:
+            temp_chunk.append(item)
+    chunk_array.append(temp_chunk)
     return chunk_array
 
 
