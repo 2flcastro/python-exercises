@@ -2,21 +2,22 @@
 # Where do I Belong
 # ----------------------------------
 # Return the lowest index at which a value (second argument) should be inserted
-# into an array (first argument) once it has been sorted. The returned value
+# into an list (first argument) once it has been sorted. The returned value
 # should be a number.
 #
 # For example, get_index([1,2,3,4], 1.5) should return "1" because it i
 # greater than 1 (index 0) and less than 2 (index 1).
 #
-# Likewise, get_index([20,3,5], 19) should return "2" because once the array has
+# Likewise, get_index([20,3,5], 19) should return "2" because once the list has
 # been sorted it will look like [3, 5, 20] and 19 is less than 20 (index 2)
 # and greater than 5 (index 1).
 # ----------------------------------
 
 import unittest
 
-def get_index(arr, num):
+def get_index(lst, num):
     return index
+
 
 
 # ----------------------------------

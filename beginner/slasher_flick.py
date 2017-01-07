@@ -1,16 +1,16 @@
 # ----------------------------------
 # Slasher Flick
 # ----------------------------------
-# Return the remaining elements of an array after chopping off "n" elements
+# Return the remaining elements of a list after chopping off "n" elements
 # from the head.
 #
-# The head means the beginning of the array, or the zeroth index.
+# The head means the beginning of the list, or the zeroth index.
 # ----------------------------------
 
 import unittest
 
-def slasher(arr, amount):
-    return slashed_arr
+def slasher(lst, amount):
+    return slashed_lst
 
 
 

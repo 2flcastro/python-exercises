@@ -1,15 +1,15 @@
 # ----------------------------------
 # Falsy Bouncer
 # ----------------------------------
-# Remove all falsy values from an array.
+# Remove all falsy values from a list.
 #
 # Falsy values include: False, 0, "", [], (), {}, None
 # ----------------------------------
 
 import unittest
 
-def bouncer(arr):
-    return arr
+def bouncer(lst):
+    return lst
 
 
 # ----------------------------------
