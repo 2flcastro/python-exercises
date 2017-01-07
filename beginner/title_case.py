@@ -29,7 +29,6 @@ class Test_Title_Case(unittest.TestCase):
         self.assertEqual(title_case("HERE IS MY HANDLE HERE IS MY SPOUT"), "Here Is My Handle Here Is My Spout")
 
 
-
 # ----------------------------------
 # Run Tests
 # ----------------------------------

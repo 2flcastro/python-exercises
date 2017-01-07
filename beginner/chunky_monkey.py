@@ -1,14 +1,14 @@
 # ----------------------------------
 # Chunky Monkey
 # ----------------------------------
-# Write a function that splits an array (first argument) into groups the length
-# of "size" (second argument) and returns them as a two dimensional array.
+# Write a function that splits a list (first argument) into groups the length
+# of "size" (second argument) and returns them as a two dimensional list.
 # ----------------------------------
 
 import unittest
 
-def chunk_array_groups(arr, size):
-    return chunk_array
+def chunk_array_groups(lst, size):
+    return chunk_lst
 
 
 
