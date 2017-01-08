@@ -16,7 +16,20 @@
 
 import unittest
 
+# using "in" operator
 def mutations(lst):
+    # iterate through second element
+    for letter in lst[1].lower():
+        if not letter in lst[0].lower():
+            return False
+    return True
+
+
+# using for-loop and list.find()
+def mutations_2(lst):
+    for i in range(len(lst[1])):
+        if lst[0].lower().find(lst[1].lower()[i]) == -1:
+            return False
     return True
 
 
@@ -43,13 +56,42 @@ class Test_Mutations(unittest.TestCase):
         self.assertEqual(mutations(["Alien", "line"]), True)
 
     def test_7(self):
-        self.assertEqual(mutations(["floor", "for"), True)
+        self.assertEqual(mutations(["floor", "for"]), True)
 
     def test_8(self):
         self.assertEqual(mutations(["hello", "neo"]), False)
 
     def test_9(self):
         self.assertEqual(mutations(["voodoo", "no"]), False)
+
+
+class Test_Mutations_2(unittest.TestCase):
+    def test_1(self):
+        self.assertEqual(mutations_2(["hello", "hey"]), False)
+
+    def test_2(self):
+        self.assertEqual(mutations_2(["hello", "Hello"]), True)
+
+    def test_3(self):
+        self.assertEqual(mutations_2(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]), True)
+
+    def test_4(self):
+        self.assertEqual(mutations_2(["Mary", "Army"]), True)
+
+    def test_5(self):
+        self.assertEqual(mutations_2(["Mary", "Aarmy"]), True)
+
+    def test_6(self):
+        self.assertEqual(mutations_2(["Alien", "line"]), True)
+
+    def test_7(self):
+        self.assertEqual(mutations_2(["floor", "for"]), True)
+
+    def test_8(self):
+        self.assertEqual(mutations_2(["hello", "neo"]), False)
+
+    def test_9(self):
+        self.assertEqual(mutations_2(["voodoo", "no"]), False)
 
 
 # ----------------------------------
