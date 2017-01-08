@@ -34,7 +34,7 @@ class Test_Slasher(unittest.TestCase):
         self.assertEqual(slasher(["burgers", "fries", "shake"], 1), ["fries", "shake"])
 
     def test_6(self):
-        self.assertEqual(slasher([1, 2, "chicken", 3, "potatoes", "cheese", 4], 5), ["cheese", 4])
+        self.assertEqual(slasher([1, 2, "chicken", 3, "potatoes", "cheese"], 4], 5), ["cheese", 4])
 
 
 # ----------------------------------
