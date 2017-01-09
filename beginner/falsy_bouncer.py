@@ -22,11 +22,14 @@ class Test_Bouncer(unittest.TestCase):
     def test_2(self):
         self.assertEqual(bouncer(["a", "b", "c"]), ["a", "b", "c"])
 
-    def test_2(self):
+    def test_3(self):
         self.assertEqual(bouncer([False, None, 0, ""]), [])
 
-    def test_2(self):
+    def test_4(self):
         self.assertEqual(bouncer([1, None, 2]), [1, 2])
+
+    def test_5(self):
+        self.assertEqual(bouncer([[], {}, (), set(), "Empty Data Structures"]), ["Empty Data Structures"])
 
 
 # ----------------------------------
