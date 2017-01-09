@@ -9,8 +9,8 @@
 import unittest
 
 
-def find_longest_word(str):
-    return len(str)
+def find_longest_word(strg):
+    return len(strg)
 
 
 # ----------------------------------

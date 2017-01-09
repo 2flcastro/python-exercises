@@ -7,9 +7,9 @@
 
 import unittest
 
-def reverseString(str):
+def reverseString(strg):
     # your code goes here...
-    return str
+    return strg
 
 
 

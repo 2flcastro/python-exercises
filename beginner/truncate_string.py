@@ -14,8 +14,8 @@
 
 import unittest
 
-def truncate_string(str, num):
-    return str
+def truncate_string(strg, num):
+    return strg
 
 
 

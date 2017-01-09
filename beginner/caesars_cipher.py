@@ -18,8 +18,8 @@
 
 import unittest
 
-def rot13(str):
-    return decoded_str
+def rot13(strg):
+    return decoded_strg
 
 
 

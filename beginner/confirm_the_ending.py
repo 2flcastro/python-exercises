@@ -7,7 +7,7 @@
 
 import unittest
 
-def confirm_ending(str, target):
+def confirm_ending(strg, target):
     return True
 
 

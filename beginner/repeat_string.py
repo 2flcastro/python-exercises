@@ -9,7 +9,7 @@
 
 import unittest
 
-def repeat_string(str, num):
+def repeat_string(strg, num):
     return str
 
 

@@ -21,7 +21,7 @@
 # ----------------------------------
 import unittest
 
-def palindrome(str):
+def palindrome(strg):
     return True
 
 
