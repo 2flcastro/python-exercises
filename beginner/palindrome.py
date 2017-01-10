@@ -1,5 +1,6 @@
+# ----------------------------------
 # Check for Palindromes
-# --------------------------
+# ----------------------------------
 # Return True if the given string is a palindrome. Otherwise, return False.
 #
 # A palindrome is a word or sentence that's spelled the same way both forward
@@ -17,7 +18,7 @@
 #
 # Tip: Python's regular expressions documentation might be useful
 # https://docs.python.org/3.4/howto/regex.html
-# ----------------------------------------------------
+# ----------------------------------
 import unittest
 
 def palindrome(str):

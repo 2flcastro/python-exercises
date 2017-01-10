@@ -1,5 +1,6 @@
+# ----------------------------------
 # Facorialize A Number
-# --------------------------
+# ----------------------------------
 # Return a factorial of the provided ineger.
 # If the integer is represented with the letter "n", a
 # factorial is the product of all positive integers less
@@ -11,7 +12,8 @@
 # Note: you can return whatever variable you want from your
 # function - no necessarily one named "num" - so long as it
 # is your solution.
-# -----------------------------------------------------------
+# ----------------------------------
+
 import unittest
 
 def factorialize(num):
@@ -32,6 +34,7 @@ def recursivefactorial(num):
 
 # ----------------------------------
 # Unit Tests
+# ----------------------------------
 class TestFactorializeNumber(unittest.TestCase):
     def test_1(self):
         self.assertEqual(factorialize(5), 120)
@@ -55,6 +58,8 @@ class TestFactorializeNumber(unittest.TestCase):
     def test_4(self):
         self.assertEqual(recursivefactorial(0), 1)
 
+# ----------------------------------
 # Run Tests
+# ----------------------------------
 if __name__ == '__main__':
     unittest.main()
