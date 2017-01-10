@@ -23,13 +23,13 @@ class Test_Destroyer(unittest.TestCase):
     def test_2(self):
         self.assertEqual(destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3), [1, 5, 1])
 
-    def test_2(self):
+    def test_3(self):
         self.assertEqual(destroyer([3, 5, 1, 2, 2], 2, 3, 5), [1])
 
-    def test_2(self):
-        self.assertEqual(destroyer([2, 3, 2, 3], 2, 3)), [])
+    def test_4(self):
+        self.assertEqual(destroyer([2, 3, 2, 3], 2, 3), [])
 
-    def test_2(self):
+    def test_5(self):
         self.assertEqual(destroyer(["tree", "hamburger", 53], "tree", 53), ["hamburger"])
 
 
