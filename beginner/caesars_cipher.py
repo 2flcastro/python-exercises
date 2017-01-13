@@ -14,6 +14,10 @@
 #
 # All letters will be uppercase. Do not transform any non-alphabetic character
 # (i.e. spaces, punctuations), but do pass them on.
+#
+# Tip: You might find the Python built-in functions chr() and ord() useful for
+# this exercise:
+# https://docs.python.org/3.4/library/functions.html
 # ----------------------------------
 
 import unittest
