@@ -14,12 +14,18 @@
 
 import unittest
 
-def truncate_string(str, num):
-    if len(str) > num:
+# using nested conditional expressions
+def truncate_string(strg, num):
+    return (strg[:num:] + "..." if num <= 3 else strg[:num-3:] + "...") if len(strg) > num  else strg
+
+
+# using nested if statements
+def truncate_string_2(strg, num):
+    if len(strg) > num:
         if num <= 3:
-            return str[:num:] + "..."
-        return str[:num-3:] + "..."
-    return str
+            return strg[:num:] + "..."
+        return strg[:num-3:] + "..."
+    return strg
 
 
 
@@ -44,6 +50,26 @@ class Test_Truncate_String(unittest.TestCase):
 
     def test_6(self):
         self.assertEqual(truncate_string("Absolutely Longer", 2), "Ab...")
+
+
+class Test_Truncate_String_2(unittest.TestCase):
+    def test_1(self):
+        self.assertEqual(truncate_string_2("A-tisket a-tasket A green and yellow basket", 11), "A-tisket...")
+
+    def test_2(self):
+        self.assertEqual(truncate_string_2("Peter Piper picked a peck of pickled peppers", 14), "Peter Piper...")
+
+    def test_3(self):
+        self.assertEqual(truncate_string_2("A-tisket a-tasket A green and yellow basket", len("A-tisket a-tasket A green and yellow basket")), "A-tisket a-tasket A green and yellow basket")
+
+    def test_4(self):
+        self.assertEqual(truncate_string_2("A-tisket a-tasket A green and yellow basket", len("A-tisket a-tasket A green and yellow basket") + 2) , "A-tisket a-tasket A green and yellow basket")
+
+    def test_5(self):
+        self.assertEqual(truncate_string_2("A-", 1), "A...")
+
+    def test_6(self):
+        self.assertEqual(truncate_string_2("Absolutely Longer", 2), "Ab...")
 
 
 # ----------------------------------
