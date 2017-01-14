@@ -6,22 +6,32 @@
 # ----------------------------------
 
 import unittest
+import math
 
-def chunk_array_groups(arr, size):
-    # create final chunk list
-    chunk_array = []
-    # create placeholder list
+# using temporary chunk
+def chunky_monkey(lst, size):
+    chunks = []
     temp_chunk = []
-    for item in arr:
+    for item in lst:
         if len(temp_chunk) == size:
-            chunk_array.append(temp_chunk)
+            chunks.append(temp_chunk)
             temp_chunk = []
             temp_chunk.append(item)
         else:
             temp_chunk.append(item)
-    chunk_array.append(temp_chunk)
-    return chunk_array
+    chunks.append(temp_chunk)
+    return chunks
 
+
+# using list slices
+def chunky_monkey_2(lst, size):
+    chunks = []
+    num_chunks = math.floor(len(lst) / size)
+    for i in range(num_chunks):
+        chunks.append(lst[i * size:i * size + size])
+    if len(lst) % size:
+        chunks.append(lst[num_chunks * size:])
+    return chunks
 
 
 # ----------------------------------
@@ -29,25 +39,48 @@ def chunk_array_groups(arr, size):
 # ----------------------------------
 class Test_Chunk_Array_Groups(unittest.TestCase):
     def test_1(self):
-        self.assertEqual(chunk_array_groups(["a", "b", "c", "d"], 2), [["a", "b"], ["c", "d"]])
+        self.assertEqual(chunky_monkey(["a", "b", "c", "d"], 2), [["a", "b"], ["c", "d"]])
 
     def test_2(self):
-        self.assertEqual(chunk_array_groups([0, 1, 2, 3, 4, 5], 3), [[0, 1, 2], [3, 4, 5]])
+        self.assertEqual(chunky_monkey([0, 1, 2, 3, 4, 5], 3), [[0, 1, 2], [3, 4, 5]])
 
     def test_3(self):
-        self.assertEqual(chunk_array_groups([0, 1, 2, 3, 4, 5], 2), [[0, 1], [2, 3], [4, 5]])
+        self.assertEqual(chunky_monkey([0, 1, 2, 3, 4, 5], 2), [[0, 1], [2, 3], [4, 5]])
 
     def test_4(self):
-        self.assertEqual(chunk_array_groups([0, 1, 2, 3, 4, 5], 4), [[0, 1, 2, 3], [4, 5]])
+        self.assertEqual(chunky_monkey([0, 1, 2, 3, 4, 5], 4), [[0, 1, 2, 3], [4, 5]])
 
     def test_5(self):
-        self.assertEqual(chunk_array_groups([0, 1, 2, 3, 4, 5, 6], 3), [[0, 1, 2], [3, 4, 5], [6]])
+        self.assertEqual(chunky_monkey([0, 1, 2, 3, 4, 5, 6], 3), [[0, 1, 2], [3, 4, 5], [6]])
 
     def test_6(self):
-        self.assertEqual(chunk_array_groups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4), [[0, 1, 2, 3], [4, 5, 6, 7], [8]])
+        self.assertEqual(chunky_monkey([0, 1, 2, 3, 4, 5, 6, 7, 8], 4), [[0, 1, 2, 3], [4, 5, 6, 7], [8]])
 
     def test_7(self):
-        self.assertEqual(chunk_array_groups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2), [[0, 1], [2, 3], [4, 5], [6, 7], [8]])
+        self.assertEqual(chunky_monkey([0, 1, 2, 3, 4, 5, 6, 7, 8], 2), [[0, 1], [2, 3], [4, 5], [6, 7], [8]])
+
+
+class Test_Chunk_Array_Groups_2(unittest.TestCase):
+    def test_1(self):
+        self.assertEqual(chunky_monkey_2(["a", "b", "c", "d"], 2), [["a", "b"], ["c", "d"]])
+
+    def test_2(self):
+        self.assertEqual(chunky_monkey_2([0, 1, 2, 3, 4, 5], 3), [[0, 1, 2], [3, 4, 5]])
+
+    def test_3(self):
+        self.assertEqual(chunky_monkey_2([0, 1, 2, 3, 4, 5], 2), [[0, 1], [2, 3], [4, 5]])
+
+    def test_4(self):
+        self.assertEqual(chunky_monkey_2([0, 1, 2, 3, 4, 5], 4), [[0, 1, 2, 3], [4, 5]])
+
+    def test_5(self):
+        self.assertEqual(chunky_monkey_2([0, 1, 2, 3, 4, 5, 6], 3), [[0, 1, 2], [3, 4, 5], [6]])
+
+    def test_6(self):
+        self.assertEqual(chunky_monkey_2([0, 1, 2, 3, 4, 5, 6, 7, 8], 4), [[0, 1, 2, 3], [4, 5, 6, 7], [8]])
+
+    def test_7(self):
+        self.assertEqual(chunky_monkey_2([0, 1, 2, 3, 4, 5, 6, 7, 8], 2), [[0, 1], [2, 3], [4, 5], [6, 7], [8]])
 
 
 # ----------------------------------
