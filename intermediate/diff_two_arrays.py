@@ -13,7 +13,7 @@
 import unittest
 
 def diff_lst(lst1, lst2):
-    return sym_difff
+    return sym_diff
 
 
 
