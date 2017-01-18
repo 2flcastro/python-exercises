@@ -43,7 +43,7 @@ class Test_Mutations(unittest.TestCase):
         self.assertEqual(mutations(["Alien", "line"]), True)
 
     def test_7(self):
-        self.assertEqual(mutations(["floor", "for"), True)
+        self.assertEqual(mutations(["floor", "for"]), True)
 
     def test_8(self):
         self.assertEqual(mutations(["hello", "neo"]), False)
