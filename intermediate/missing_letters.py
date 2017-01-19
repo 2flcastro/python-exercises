@@ -8,7 +8,6 @@
 
 import unittest
 
-# using range(), chr(), and ord() built-in functions
 def missing_letters(strg):
     return missing_letter
 
