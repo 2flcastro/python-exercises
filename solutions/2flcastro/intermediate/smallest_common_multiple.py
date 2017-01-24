@@ -37,7 +37,7 @@ def smallest_common(lst):
 
 
 
-# There is another formula for find the SCM of a pair of numbers:
+# There is another formula for finding the SCM of a pair of numbers:
 #   LCM(a, b) = a * b / GCD(a, b)
 # You first need to find the GCD (greatest common divisor), which is done Using
 # the Euclidean Algorithm (euclidean_gcd() function).

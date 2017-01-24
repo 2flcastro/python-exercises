@@ -10,6 +10,7 @@
 
 import unittest
 
+# using list comprehension to convert binary into into int into string
 def binary_agent(sentence):
     sentence = sentence.split()
     sentence = [chr(int(word, 2)) for word in sentence]

@@ -6,7 +6,7 @@
 #
 # Useful Links:
 # - HTML Entities: https://dev.w3.org/html5/html-author/charref
-# - Python RegEx: https://docs.python.org/3/library/re.html#module-re
+# - Python Regex: https://docs.python.org/3/library/re.html#module-re
 # ----------------------------------
 
 import unittest

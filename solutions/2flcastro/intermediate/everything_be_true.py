@@ -1,7 +1,7 @@
 # ----------------------------------
 # Everything Be True
 # ----------------------------------
-# Check if the property (second argument) is truthy on all elements in a
+# Check if the property (second argument) is "truthy" on all elements in a
 # collection (first argument).
 #
 # Remember you can access a dictionary's properties through [] notation.
